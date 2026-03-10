@@ -18,6 +18,7 @@ chmod 600 "${HOME}/.labs/github-token"
 echo "GitHub token saved."
 
 # Fetch and run flabs setup using the provided token
+export GITHUB_TOKEN="$1"
 curl -sSL \
   -H "Authorization: Bearer $1" \
   -H "Accept: application/vnd.github.raw+json" \
